@@ -1,0 +1,53 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2019-08-05T18:51:50.494Z",
+        "line": 11,
+        "name": "My Test Scenario",
+        "description": "",
+        "id": "my-test-feature;my-test-scenario;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7221471400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user opens the browser",
+            "match": {
+              "location": "TestSteps.the_user_opens_the_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 98400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the browser must open",
+            "match": {
+              "location": "TestSteps.the_browser_must_open()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "My test feature",
+    "description": "  Testing automation project creation",
+    "id": "my-test-feature",
+    "keyword": "Feature",
+    "uri": "classpath:features/TestFeature.feature",
+    "tags": []
+  }
+]
