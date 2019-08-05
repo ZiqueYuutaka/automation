@@ -13,21 +13,33 @@ import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.Scope;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//@PropertySource("test.properties")
+@PropertySource("test.properties")
 //@Component
 //@Scope("cucumber-glue")
+@Configuration
 public class BrowserUtils {
 	
 	//I can also just use the environment variable
-	public String browser="chrome";
-	public String browserVersion="75.0.3770.140";
+	/*public String browser="chrome";
+	public String browserVersion="75.0.3770.140";*/
+	@Value("${config.browser}")
+	public String browser;
+	@Value("${config.browser.version}")
+	public String browserVersion;
 	
 	private final String DEFAULT_DOWNLOAD_DIRECTORY = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator
             + "resources" + File.separator + "downloadFiles" + File.separator + "allDownloads";
 	
+	@Bean
+	@Scope("cucumber-glue")
 	public EventFiringWebDriver getWebDriver(){
 		switch(this.browser){
 		case "chrome":

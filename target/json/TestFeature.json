@@ -3,7 +3,6 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2019-08-05T18:51:50.494Z",
         "line": 11,
         "name": "My Test Scenario",
         "description": "",
@@ -13,26 +12,20 @@
         "steps": [
           {
             "result": {
-              "duration": 7221471400,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 7,
             "name": "the user opens the browser",
-            "match": {
-              "location": "TestSteps.the_user_opens_the_browser()"
-            },
+            "match": {},
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 98400,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 8,
             "name": "the browser must open",
-            "match": {
-              "location": "TestSteps.the_browser_must_open()"
-            },
+            "match": {},
             "keyword": "Then "
           }
         ],
@@ -47,7 +40,7 @@
     "description": "  Testing automation project creation",
     "id": "my-test-feature",
     "keyword": "Feature",
-    "uri": "classpath:features/TestFeature.feature",
+    "uri": "features\\TestFeature.feature",
     "tags": []
   }
 ]
